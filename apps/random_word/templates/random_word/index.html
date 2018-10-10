@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Random Word Generator</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'random_word/css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <p>Random Word (attempt #{{ request.session.counter }})</p>
+        <h1>{{ word }}</h1>
+        <a href="/">Generate</a><br>
+        <a href="/random_word/reset">Reset Counter</a>
+    </div>
+</body>
+</html>
